@@ -76,5 +76,34 @@ const getGenderName = () => {
             else if (birthDay == 7) {
                 alert("Your Akan name is " + khanMales[7]);
             }
+            break;
+        case "female":
+            if (birthDay == 1) {
+                alert("Your Akan name is " + khanFemales[0]);
+            }
+            else if (birthDay == 2) {
+                alert("Your Akan name is " + khanFemales[2]);
+            }
+            else if (birthDay == 3) {
+                alert("Your Akan name is " + khanMales[3]);
+            }
+            else if (birthDay == 4) {
+                alert("Your Akan name is " + khanFemales[4]);
+            }
+            else if (birthDay == 4) {
+                alert("Your Akan name is " + khanFemales[4]);
+            }
+            else if (birthDay == 5) {
+                alert("Your Akan name is " + khanFemales[5]);
+            }
+            else if (birthDay == 6) {
+                alert("Your Akan name is " + khanFemales[6]);
+            }
+            else if (birthDay == 7) {
+                alert("Your Akan name is " + khanFemales[7]);
+            }
+            break;
+            default:
+                alert("Unknown Akan Name");
     }
 }
