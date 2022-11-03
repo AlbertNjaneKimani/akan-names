@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="card-title">Enter Your Birth Details</div>
                     <div class="card-body">
-                        <form name="inputForm" class="form" onsubmit="getAkanName();">
+                        <form name="inputForm" class="form" onsubmit="validateInputs();">
                             <div class="form-group">
                                 <label for="year">Year:</label>
                                 <input type="text" class="form-control" id="year" name="year">
@@ -55,7 +55,7 @@
                             </div>
                            
                             <div>
-                                <button class="btn btn-primary" type="submit" onclick="validateInputs();">Output
+                                <button class="btn btn-primary" type="submit" onclick="getAkanName();">Output
                                     Name</button>
 
                             </div>
