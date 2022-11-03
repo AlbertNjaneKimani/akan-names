@@ -11,21 +11,24 @@ const validateInputs = () => {
     //validate year
     if (year == "" || year.length != 4 || year > 2100 || year <= 1900) {
         alert("Please enter a valid year of birth");
+        document.getElementById("year").focus();
         return false;
     }
     //validate month
     else if (month == "" || isNaN(month) || month.length != 2 || month > 12 || month <= 0) {
         alert("Please enter a valid month of birth");
+        document.inputForm.month.focus();
         return false;
     }
     //validate day
     else if (day == "" || isNaN(day) || day.length != 2 || day > 31 || day <= 0) {
         alert("Please enter a valid date of birth");
+        document.inputForm.day.focus();
         return false;
     }
     //validate gender
-    else if (genders[0].checked == false || genders[1].checked == false) {
-        alert("Please select gender");
+    else if (document.getElementById('female').checked==false && document.getElementById('male').checked == false) {
+        alert("please select gender");
         return false;
     }
     else {
@@ -39,12 +42,15 @@ const calculateDayFromFormular = () => {
     MM = parseInt(document.getElementById("month").value);
     DD = parseInt(document.getElementById("day").value);
     d = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+   // birthDay =(Math.floor(d))
+    return (Math.floor(d));
+   
 }
 const getGenderName = () => {
-    var genders = document.getElementByname("gender");
-    if (genders[0].checked == true) {
+    //var genders = document.getElementByName("gender");
+    if (document.getElementById('male').checked == true) {
         var gender = "male";
-    } else if (genders[1].checked == true) {
+    } else if (document.getElementById('female').checked == true) {
         var gender = "female";
     }
     else {
@@ -104,6 +110,11 @@ const getGenderName = () => {
             }
             break;
             default:
-                alert("Unknown Akan Name");
     }
+}
+
+const getAkanName=()=>{
+   birthDay = calculateDayFromFormular();
+    getGenderName();
+
 }
