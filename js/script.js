@@ -27,11 +27,10 @@ const validateInputs = () => {
         return false;
     }
     //validate gender
-    else if (document.getElementById('female').checked==false && document.getElementById('male').checked == false) {
+    else if (document.getElementById('female').checked == false && document.getElementById('male').checked == false) {
         alert("please select gender");
         return false;
-    }
-    else {
+    } else {
         return true;
     }
 }
@@ -42,9 +41,9 @@ const calculateDayFromFormular = () => {
     MM = parseInt(document.getElementById("month").value);
     DD = parseInt(document.getElementById("day").value);
     d = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
-   // birthDay =(Math.floor(d))
+    // birthDay =(Math.floor(d))
     return (Math.floor(d));
-   
+
 }
 const getGenderName = () => {
     //var genders = document.getElementByName("gender");
@@ -52,64 +51,50 @@ const getGenderName = () => {
         var gender = "male";
     } else if (document.getElementById('female').checked == true) {
         var gender = "female";
-    }
-    else {
+    } else {
         return false;
     }
     switch (gender) {
         case "male":
             if (birthDay == 1) {
                 alert("Your Akan name is " + khanMales[0]);
-            }
-            else if (birthDay == 2) {
+            } else if (birthDay == 2) {
                 alert("Your Akan name is " + khanMales[1]);
-            }
-            else if (birthDay == 3) {
+            } else if (birthDay == 3) {
                 alert("Your Akan name is " + khanMales[2]);
-            }
-            else if (birthDay == 4) {
+            } else if (birthDay == 4) {
                 alert("Your Akan name is " + khanMales[3]);
-            }
-            else if (birthDay == 5) {
+            } else if (birthDay == 5) {
                 alert("Your Akan name is " + khanMales[4]);
-            }
-            else if (birthDay == 6) {
+            } else if (birthDay == 6) {
                 alert("Your Akan name is " + khanMales[5]);
-            }
-          
-            else if (birthDay == 7) {
+            } else if (birthDay == 7) {
                 alert("Your Akan name is " + khanMales[6]);
             }
             break;
         case "female":
             if (birthDay == 1) {
                 alert("Your Akan name is " + khanFemales[0]);
-            }
-            else if (birthDay == 2) {
+            } else if (birthDay == 2) {
                 alert("Your Akan name is " + khanFemales[1]);
-            }
-            else if (birthDay == 3) {
+            } else if (birthDay == 3) {
                 alert("Your Akan name is " + khanFemales[2]);
-            }
-            else if (birthDay == 4) {
+            } else if (birthDay == 4) {
                 alert("Your Akan name is " + khanFemales[3]);
-            }
-            else if (birthDay == 5) {
+            } else if (birthDay == 5) {
                 alert("Your Akan name is " + khanFemales[4]);
-            }
-            else if (birthDay == 6) {
+            } else if (birthDay == 6) {
                 alert("Your Akan name is " + khanFemales[5]);
-            }
-            else if (birthDay == 7) {
+            } else if (birthDay == 7) {
                 alert("Your Akan name is " + khanFemales[6]);
             }
             break;
-            default:
+        default:
     }
 }
 
-const getAkanName=()=>{
-   birthDay = calculateDayFromFormular();
+const getAkanName = () => {
+    birthDay = calculateDayFromFormular();
     getGenderName();
 
 }
