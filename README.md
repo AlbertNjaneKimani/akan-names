@@ -2,7 +2,7 @@
 #### This Project is developed to demonstrate the knowledge of Javascript
 #### By **Albert njane**
 ## Description
-This is a web portfolio that takes in a users birthday and calculate the day of the week they were born and then depending on their gender, outputs their Akan name.
+This is a web project that takes in a users birthday and calculate the day of the week they were born and then depending on their gender, outputs their Akan name.
 ## Setup/Installation Requirements
 * Clone the project repository into your local machine ie git clone https://github.com/AlbertNjaneKimani/akan-names.git
 * Navigate to index.html file.
