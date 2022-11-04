@@ -8,3 +8,9 @@
   .card-title{
     text-align: center;
   }
+  .footer{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+  }
